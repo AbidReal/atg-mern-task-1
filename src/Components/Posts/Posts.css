@@ -1,0 +1,12 @@
+.d-flex .table-disabled {
+  color: #8a8a8a !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.d-flex .table-active {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  border-bottom: 1px solid black !important; /* Added a border-bottom instead of just 'black' */
+}
