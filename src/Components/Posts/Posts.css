@@ -10,3 +10,6 @@
   font-weight: 400 !important;
   border-bottom: 1px solid black !important; /* Added a border-bottom instead of just 'black' */
 }
+.dropdown-toggle::after {
+  display: none !important;
+}

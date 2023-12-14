@@ -18,7 +18,7 @@
 }
 @media (max-width: 991px) {
   .custom-form {
-    width: 100% !important; /* Take full width on smaller screens */
+    width: 100% !important;
   }
 }
 
@@ -28,7 +28,7 @@
 
 .search-icon {
   position: absolute;
-  left: 15px; /* Adjust as needed */
+  left: 15px;
   top: 10px;
   color: gray;
 }

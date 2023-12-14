@@ -37,3 +37,44 @@
     max-width: 1040px;
   }
 }
+.custom-container-2 {
+  width: 100%; /* Default width for smaller screens */
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    /* Extra small devices (phones) */
+    max-width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @media (min-width: 768px) {
+    /* Small devices (tablets) */
+    max-width: 750px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: 992px) {
+    /* Medium devices (desktops) */
+    max-width: 970px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: 1200px) {
+    /* Large devices (large desktops) */
+    max-width: 1040px;
+  }
+}
+
+.mobile-hide {
+  @media (max-width: 576px) {
+    display: none !important;
+  }
+}
+.tablet-hide {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}

@@ -37,7 +37,7 @@ const Navigation = () => {
       style={{
         justifyContent: "space-between",
         maxWidth: "1440px",
-        margin: "0 auto",
+        margin: "12px auto",
       }}
     >
       <Container fluid>
