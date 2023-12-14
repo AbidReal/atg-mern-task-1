@@ -26,13 +26,20 @@ const Navigation = () => {
     return (
       <div
         className="mobile-view"
-        style={{ backgroundColor: "grey", height: "10vh" }}
+        style={{ backgroundColor: "white", height: "24px" }}
       />
     );
   }
 
   return (
-    <Navbar expand="lg" style={{ justifyContent: "space-between" }}>
+    <Navbar
+      expand="xxl"
+      style={{
+        justifyContent: "space-between",
+        maxWidth: "1440px",
+        margin: "0 auto",
+      }}
+    >
       <Container fluid>
         <Navbar.Brand href="#home">
           <img src={logo} alt="" />

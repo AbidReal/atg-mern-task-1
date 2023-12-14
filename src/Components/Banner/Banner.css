@@ -1,0 +1,62 @@
+.banner-container {
+  position: relative;
+  overflow: hidden;
+  height: 440px;
+
+  @media (max-width: 576px) {
+    height: 236px;
+  }
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://s3-alpha-sig.figma.com/img/756e/302b/7d56a759ac56bc165f65c40094aba4e8?Expires=1703462400&Signature=IAT6dPfETLj2u7Enhy81kPcbDlXb1d-S-H3621veX198gBNxEDBawd46cp0X~l38FzkLlhdXe5Gyc7RxiQqWbGjQlPfUQ8AaNut5BFcjUXeQdFKlvuoXc~ssc6ww3BVHDN933hA6Rv0tsyJA147cKw8512nZWRE9ijZCogf18VvXj4jeq2FcIUkVZUN5qQcJUXrutManIctUubla5RX2vEBZOZPQGvByTF8FBqcJo5SLayBogne9f~Rhs5zPjN2IAfsY8mFZX7nNx8BJ-F9et3bBzGp0FQ8xCuxkfYg8u-pdBDCbDe6oyXziNDHXenbk2NUb~pjfosHGuSSODJNq0Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.banner-header {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 110px;
+  transform: none;
+  @media (max-width: 576px) {
+    /* Extra small devices (phones) */
+    bottom: 55px;
+    font-size: 16px;
+  }
+}
+.banner-description {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 80px;
+  transform: none;
+
+  @media (max-width: 576px) {
+    /* Extra small devices (phones) */
+    bottom: 32px;
+    font-size: 12px;
+  }
+}

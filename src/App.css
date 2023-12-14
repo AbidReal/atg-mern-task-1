@@ -1,7 +1,4 @@
 #root {
-  max-width: 1440px;
-  margin: 0 auto;
-
   text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5;
@@ -11,4 +8,32 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* app.css */
+.custom-container {
+  width: 100%; /* Default width for smaller screens */
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 576px) {
+    /* Extra small devices (phones) */
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    /* Small devices (tablets) */
+    max-width: 750px;
+  }
+
+  @media (min-width: 992px) {
+    /* Medium devices (desktops) */
+    max-width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    /* Large devices (large desktops) */
+    max-width: 1040px;
+  }
 }
