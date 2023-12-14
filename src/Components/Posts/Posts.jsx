@@ -10,33 +10,33 @@ const Posts = () => {
   const data = [
     {
       id: 1,
-      image: "../../../public/article-1.png",
+      image: "https://i.ibb.co/wLbdHbv/article-1.png",
       category: "✍️ Article",
       title: "What if famous brands had regular fonts? Meet RegulaBrands!",
       description:
         "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
-      personImage: "../../../public/person-1.png",
+      personImage: "https://i.ibb.co/CMPcphY/person-1.png",
       personName: "Sarthak Kamra",
       views: "1.4k views",
     },
     {
       id: 2,
-      image: "../../../public/article-2.png",
+      image: "https://i.ibb.co/jWMkRhb/article-2.png",
       category: "🔬️ Education",
       title:
         "Tax Benefits for Investment under National Pension Scheme launched by Government",
       description:
         "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
-      personImage: "../../../public/person-2.png",
+      personImage: "https://i.ibb.co/HrqdpW1/person-2.png",
       personName: "Sarah West",
       views: "1.4k views",
     },
     {
       id: 3,
-      image: "../../../public/article-3.png",
+      image: "https://i.ibb.co/yk0X8fn/article-3.png",
       category: "🗓️ Meetup",
       title: "Finance & Investment Elite Social Mixer @Lujiazui",
-      personImage: "../../../public/person-3.png",
+      personImage: "https://i.ibb.co/PTRZhyh/person-3.png",
       personName: "Ronal Jones",
       views: "1.4k views",
       date: "Fri, 12 Oct, 2018",
@@ -47,7 +47,7 @@ const Posts = () => {
       id: 4,
       category: "💼️ Job",
       title: "Software Developer",
-      personImage: "../../../public/person-4.png",
+      personImage: "https://i.ibb.co/ZJpbss4/person-4.png",
       personName: "Joseph Gray",
       views: "1.4k views",
       team: "Innovaccer Analytics Private Ltd.",
