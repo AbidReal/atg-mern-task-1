@@ -1,0 +1,34 @@
+.custom-form {
+  width: 360px !important;
+  height: 42px !important;
+  flex-shrink: 0 !important;
+  border-radius: 21px !important;
+  background: #f2f2f2 !important;
+  border: transparent !important;
+  font-size: 14px !important;
+}
+
+.custom-form::placeholder {
+  color: var(--placeholder-color) !important;
+}
+.custom-nav {
+  color: #2e2e2e;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (max-width: 991px) {
+  .custom-form {
+    width: 100% !important; /* Take full width on smaller screens */
+  }
+}
+
+.relative-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px; /* Adjust as needed */
+  top: 10px;
+  color: gray;
+}
