@@ -1,4 +1,5 @@
 import "./Banner.css";
+import Button from "react-bootstrap/Button";
 
 const Banner = () => {
   return (
@@ -6,6 +7,10 @@ const Banner = () => {
       <div className="banner-container">
         <div className="banner-image">
           <div className="custom-container mobile-container">
+            <div className=" d-lg-none mobile-options d-flex justify-space-between ">
+              <img src="../../../public/arrow_back_24px.svg" alt="" />
+              <Button variant="outline-light">Join Group</Button>
+            </div>
             <h1 className="banner-header">
               <span>Computer Engineer</span>
             </h1>

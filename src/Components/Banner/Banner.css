@@ -71,4 +71,16 @@
     border-radius: 50%;
     z-index: 1000;
   }
+  .mobile-options img {
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+  }
+  .mobile-options button {
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+  }
 }
