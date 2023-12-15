@@ -5,7 +5,15 @@ import "./SignUp.css";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 
 const SignUp = ({ show, handleClose }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSigningUp, setIsSigningUp] = useState(true);
+
+  const toggleSignInSignUp = () => {
+    setIsSigningUp((prevState) => !prevState);
+  };
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -20,9 +28,6 @@ const SignUp = ({ show, handleClose }) => {
       window.removeEventListener("resize", checkScreenSize);
     };
   }, []);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevState) => !prevState);
@@ -68,46 +73,59 @@ const SignUp = ({ show, handleClose }) => {
       </div>
       <Modal.Body>
         <div className="d-flex justify-content-between align-items-center mx-3 ">
-          <h2 className="py-2 mb-3 custom-modal-title d-none d-lg-block">
-            Create Account
-          </h2>
+          {isSigningUp ? (
+            <h2 className="py-2 mb-3 custom-modal-title d-none d-lg-block">
+              Create Account
+            </h2>
+          ) : (
+            <h2 className="py-2 mb-3 custom-modal-title d-none d-lg-block">
+              Sign In
+            </h2>
+          )}
+
           <p className="d-none d-lg-block">
-            Already have an account?{" "}
+            {isSigningUp
+              ? "Already have an account?"
+              : "Don't have an account yet?"}{" "}
             <span
               className=""
               style={{
                 color: "#2F6CE5",
                 cursor: "pointer",
               }}
+              onClick={toggleSignInSignUp}
             >
-              Sign In
+              {isSigningUp ? "Sign In" : "Create new for free!"}
             </span>
           </p>
         </div>
         <div className="row mx-1">
-          <form className="col-12 col-lg-6 d-flex align-items-center justify-content-center ">
+          <form className="col-12 col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-between ">
             <div className="mb-3">
               <div className="py-2 mb-3 custom-modal-title d-lg-none">
-                Create Account
+                {isSigningUp ? "Create Account" : "Welcome Back!"}
               </div>
-              <div className="d-flex">
-                <input
-                  type="text"
-                  className="form-control bg-custom"
-                  placeholder="First Name"
-                  id="first-name"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                  type="text"
-                  className="form-control bg-custom"
-                  placeholder="Last Name"
-                  id="last-name"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
+              {isSigningUp && (
+                <div className="d-flex">
+                  <input
+                    type="text"
+                    className="form-control bg-custom"
+                    placeholder="First Name"
+                    id="first-name"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    className="form-control bg-custom"
+                    placeholder="Last Name"
+                    id="last-name"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              )}
+
               <input
                 type="email"
                 className="form-control bg-custom"
@@ -115,6 +133,7 @@ const SignUp = ({ show, handleClose }) => {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                style={{ minWidth: "320px" }}
               />
               <div className="position-relative">
                 <input
@@ -136,26 +155,29 @@ const SignUp = ({ show, handleClose }) => {
                   )}
                 </div>
               </div>
+              {isSigningUp && (
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className="form-control bg-custom"
+                  id="confirm-password"
+                  placeholder="Confirm Password"
+                />
+              )}
 
-              <input
-                type={showPassword ? "text" : "password"}
-                className="form-control bg-custom"
-                id="confirm-password"
-                placeholder="Confirm Password"
-              />
               <div className="d-flex justify-space-between gap-5 align-items-center">
                 <Button
                   variant="primary"
                   className=" custom-login-btn rounded-pill mb-4 mt-3 py-2 custom-btn-font-size"
                   onClick={handleSignUp}
                 >
-                  Create Account
+                  {isSigningUp ? "Create Account" : "Sign In"}
                 </Button>
                 <div
                   className="d-lg-none text-nowrap ms-auto custom-btn-font-size "
                   style={{ textDecoration: "underline", cursor: "pointer" }}
+                  onClick={toggleSignInSignUp}
                 >
-                  or, Sign In
+                  {isSigningUp ? "or, Sign In" : "or, Create Account"}
                 </div>
               </div>
 
@@ -173,6 +195,14 @@ const SignUp = ({ show, handleClose }) => {
                 <img src="../../../public/google_search.png" alt="" />
                 Sign up with Google
               </Button>
+              {isSigningUp || (
+                <div
+                  className="mx-auto text-center mt-3"
+                  style={{ fontSize: "12px", cursor: "pointer" }}
+                >
+                  Forgot Password?
+                </div>
+              )}
             </div>
           </form>{" "}
           <div className="col-lg-6 col-12 d-lg-flex flex-column justify-content-center mx-auto">
@@ -181,8 +211,12 @@ const SignUp = ({ show, handleClose }) => {
               src="../../../public/atg_illustration.png"
               alt=""
             />
-            <div className="text-center " style={{ fontSize: "11px" }}>
-              By signing up, you agree to our Terms & conditions, Privacy policy
+            <div
+              className="text-center custom-width mx-auto"
+              style={{ fontSize: "11px" }}
+            >
+              {isSigningUp &&
+                "By signing up, you agree to our Terms & conditions, Privacy policy"}
             </div>
           </div>
         </div>
