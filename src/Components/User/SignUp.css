@@ -2,10 +2,31 @@
   background-color: #f7f8fa !important;
   border-radius: 0 !important;
   padding: 15px 12px !important;
+  @media (max-width: 992px) {
+    padding: 12px 12px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .bg-custom::placeholder,
+  .custom-btn-font-size {
+    font-size: 13px !important;
+  }
 }
 .custom-modal {
   max-width: 90%;
   margin: 0 auto;
+}
+.custom-cross-button {
+  cursor: pointer;
+  position: absolute;
+  top: -40px;
+  right: -14px;
+  @media (max-width: 992px) {
+    top: 22px;
+    right: 22px;
+    fill: black;
+  }
 }
 .show-password-icon {
   position: absolute;
@@ -13,4 +34,38 @@
   right: 15px;
   transform: translateY(-50%);
   z-index: 1;
+}
+@media (max-width: 992px) {
+  .modal-dialog {
+    width: 100% !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    padding-left: 0 !important;
+    bottom: 0 !important;
+    top: 20vh !important;
+    height: 80vh !important;
+  }
+
+  .modal-content {
+    height: 80% !important;
+    border-radius: 0 !important;
+  }
+}
+.modal-dialog {
+  padding: 0 !important;
+}
+.custom-modal-title {
+  font-weight: 700;
+  font-size: 26px;
+  @media (max-width: 992px) {
+    font-size: 20px;
+  }
+}
+.custom-login-btn {
+  width: 100%;
+  @media (max-width: 992px) {
+    width: auto;
+    padding: 0 40px !important;
+  }
 }

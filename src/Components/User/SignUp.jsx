@@ -1,10 +1,25 @@
 /* eslint-disable react/prop-types */
 import { Modal, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./SignUp.css";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 
 const SignUp = ({ show, handleClose }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.matchMedia("(max-width: 992px)").matches);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -26,18 +41,15 @@ const SignUp = ({ show, handleClose }) => {
         height="28"
         viewBox="0 0 28 28"
         fill="none"
+        className="custom-cross-button"
         style={{
-          cursor: "pointer",
-          position: "absolute",
-          top: "-40px",
-          right: "-14px",
           zIndex: "1050",
         }}
       >
         <g clipPath="url(#clip0_1_2255)">
           <path
             d="M14 2.33331C7.54838 2.33331 2.33337 7.54831 2.33337 14C2.33337 20.4516 7.54838 25.6666 14 25.6666C20.4517 25.6666 25.6667 20.4516 25.6667 14C25.6667 7.54831 20.4517 2.33331 14 2.33331ZM19.8334 18.1883L18.1884 19.8333L14 15.645L9.81171 19.8333L8.16671 18.1883L12.355 14L8.16671 9.81164L9.81171 8.16665L14 12.355L18.1884 8.16665L19.8334 9.81164L15.645 14L19.8334 18.1883Z"
-            fill="white"
+            fill={isSmallScreen ? "#8A8A8A" : "white"}
           />
         </g>
         <defs>
@@ -48,18 +60,18 @@ const SignUp = ({ show, handleClose }) => {
       </svg>
 
       <div
-        className="text-center py-3 rounded-top"
+        className="text-center py-3 rounded-top d-none d-lg-block"
         style={{ backgroundColor: "#EFFFF4", color: "#008A45" }}
       >
         Let&rsquo;s learn, share & inspire each other with our passion for
         computer engineering. Sign up now 🤘🏼
       </div>
       <Modal.Body>
-        <div className="d-flex justify-content-between align-items-center mx-3">
-          <h2 className="py-2" style={{ fontSize: "26px", fontWeight: "700" }}>
+        <div className="d-flex justify-content-between align-items-center mx-3 ">
+          <h2 className="py-2 mb-3 custom-modal-title d-none d-lg-block">
             Create Account
           </h2>
-          <p>
+          <p className="d-none d-lg-block">
             Already have an account?{" "}
             <span
               className=""
@@ -73,8 +85,11 @@ const SignUp = ({ show, handleClose }) => {
           </p>
         </div>
         <div className="row mx-1">
-          <form className="col-6 d-flex align-items-center ">
+          <form className="col-12 col-lg-6 d-flex align-items-center justify-content-center ">
             <div className="mb-3">
+              <div className="py-2 mb-3 custom-modal-title d-lg-none">
+                Create Account
+              </div>
               <div className="d-flex">
                 <input
                   type="text"
@@ -128,32 +143,45 @@ const SignUp = ({ show, handleClose }) => {
                 id="confirm-password"
                 placeholder="Confirm Password"
               />
-              <Button
-                variant="primary"
-                className="w-100 rounded-pill mb-4 mt-3 py-2"
-                onClick={handleSignUp}
-              >
-                Create Account
-              </Button>
+              <div className="d-flex justify-space-between gap-5 align-items-center">
+                <Button
+                  variant="primary"
+                  className=" custom-login-btn rounded-pill mb-4 mt-3 py-2 custom-btn-font-size"
+                  onClick={handleSignUp}
+                >
+                  Create Account
+                </Button>
+                <div
+                  className="d-lg-none text-nowrap ms-auto custom-btn-font-size "
+                  style={{ textDecoration: "underline", cursor: "pointer" }}
+                >
+                  or, Sign In
+                </div>
+              </div>
+
               <Button
                 variant="light"
-                className="w-100 border py-2 d-flex gap-1 align-items-center justify-content-center"
+                className="w-100 border py-2 d-flex gap-1 align-items-center justify-content-center custom-btn-font-size"
               >
                 <img src="../../../public/f_logo_RGB-Blue_1024.png" alt="" />
                 Sign up with Facebook
               </Button>
               <Button
                 variant="light"
-                className="w-100 border py-2 mt-2 d-flex gap-1 align-items-center justify-content-center"
+                className="w-100 border py-2 mt-2 d-flex gap-1 align-items-center justify-content-center custom-btn-font-size"
               >
                 <img src="../../../public/google_search.png" alt="" />
                 Sign up with Google
               </Button>
             </div>
           </form>{" "}
-          <div className="col-6 d-flex flex-column justify-content-center mx-auto">
-            <img src="../../../public/atg_illustration.png" alt="" />
-            <div className="text-center" style={{ fontSize: "11px" }}>
+          <div className="col-lg-6 col-12 d-lg-flex flex-column justify-content-center mx-auto">
+            <img
+              className="d-none d-lg-block"
+              src="../../../public/atg_illustration.png"
+              alt=""
+            />
+            <div className="text-center " style={{ fontSize: "11px" }}>
               By signing up, you agree to our Terms & conditions, Privacy policy
             </div>
           </div>
