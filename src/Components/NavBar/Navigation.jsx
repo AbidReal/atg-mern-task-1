@@ -66,9 +66,9 @@ const Navigation = () => {
                     />
                     <FormControl
                       type="text"
-                      placeholder="         Search for your favorite groups in ATG"
-                      className="mt-1 custom-form "
-                      style={{ color: "#5c5c5c" }}
+                      placeholder="Search for your favorite groups in ATG"
+                      className="mt-1 custom-form"
+                      style={{ color: "#5c5c5c", paddingLeft: "40px" }}
                     />
                   </div>
                 </Nav>
