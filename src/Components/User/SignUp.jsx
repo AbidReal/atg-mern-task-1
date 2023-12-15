@@ -185,14 +185,17 @@ const SignUp = ({ show, handleClose }) => {
                 variant="light"
                 className="w-100 border py-2 d-flex gap-1 align-items-center justify-content-center custom-btn-font-size"
               >
-                <img src="../../../public/f_logo_RGB-Blue_1024.png" alt="" />
+                <img
+                  src="https://i.ibb.co/Dkx8RYp/f-logo-RGB-Blue-1024.png"
+                  alt=""
+                />
                 Sign up with Facebook
               </Button>
               <Button
                 variant="light"
                 className="w-100 border py-2 mt-2 d-flex gap-1 align-items-center justify-content-center custom-btn-font-size"
               >
-                <img src="../../../public/google_search.png" alt="" />
+                <img src="https://i.ibb.co/g9g7MKJ/google-search.png" alt="" />
                 Sign up with Google
               </Button>
               {isSigningUp || (
@@ -208,7 +211,7 @@ const SignUp = ({ show, handleClose }) => {
           <div className="col-lg-6 col-12 d-lg-flex flex-column justify-content-center mx-auto">
             <img
               className="d-none d-lg-block"
-              src="../../../public/atg_illustration.png"
+              src="https://i.ibb.co/n7YW7yf/atg-illustration.png"
               alt=""
             />
             <div

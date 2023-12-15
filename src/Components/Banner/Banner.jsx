@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="banner-image">
           <div className="custom-container mobile-container">
             <div className=" d-lg-none mobile-options d-flex justify-space-between ">
-              <img src="../../../public/arrow_back_24px.svg" alt="" />
+              <img src="https://i.ibb.co/t4qCBnn/arrow-back-24px.png" alt="" />
               <Button variant="outline-light">Join Group</Button>
             </div>
             <h1 className="banner-header">
@@ -21,7 +21,7 @@ const Banner = () => {
         </div>
         {/* edit circle*/}
         <div className="edit-circle d-flex align-items-center mx-auto justify-content-center">
-          <img src="../../../public/edit_24px.svg" alt="" />
+          <img src="https://i.ibb.co/cvmHL6Z/edit-24px.png" alt="" />
         </div>
       </div>
     </div>

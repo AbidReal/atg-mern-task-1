@@ -4,7 +4,7 @@ import "./Navigation.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 import logo from "../../../public/logo.svg";
-import searchIcon from "../../../public/baseline-search-24px.svg";
+import searchIcon from "https://i.ibb.co/MVjKk2r/baseline-search-24px.png";
 import SignUp from "../User/SignUp";
 
 const Navigation = () => {
