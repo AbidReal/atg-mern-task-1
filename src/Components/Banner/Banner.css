@@ -60,3 +60,15 @@
     font-size: 12px;
   }
 }
+@media (max-width: 992px) {
+  .edit-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #f0568a;
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+}

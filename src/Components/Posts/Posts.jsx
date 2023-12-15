@@ -172,7 +172,7 @@ const Posts = () => {
 
       {/* cards section */}
       <div className="row custom-container-2 p-0">
-        <div className=" mt-4 col-lg-8 col-12 p-0">
+        <div className=" mt-4 mb-5 col-lg-8 col-12 p-0">
           {data.map((item) => (
             <div key={item.id} className="card mt-3">
               {item.image && (
@@ -385,7 +385,10 @@ const Posts = () => {
           ))}
         </div>
         {/* recommendation section */}
-        <div className="col-lg-4 col-12 ps-5" style={{ textAlign: "left" }}>
+        <div
+          className="col-lg-4 col-12 ps-5 d-none d-lg-block"
+          style={{ textAlign: "left" }}
+        >
           {" "}
           <div className="d-flex justify-content-between align-items-center border-bottom my-4">
             <div className="my-2">

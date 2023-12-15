@@ -14,6 +14,10 @@ const Banner = () => {
             </p>
           </div>
         </div>
+        {/* edit circle*/}
+        <div className="edit-circle d-flex align-items-center mx-auto justify-content-center">
+          <img src="../../../public/edit_24px.svg" alt="" />
+        </div>
       </div>
     </div>
   );
