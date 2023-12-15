@@ -1,0 +1,16 @@
+.bg-custom {
+  background-color: #f7f8fa !important;
+  border-radius: 0 !important;
+  padding: 15px 12px !important;
+}
+.custom-modal {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.show-password-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 1;
+}

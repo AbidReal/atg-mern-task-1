@@ -13,3 +13,17 @@
 .dropdown-toggle::after {
   display: none !important;
 }
+.custom-tab-border {
+  @media (min-width: 576px) {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+.custom-selected-border {
+  @media (min-width: 576px) {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: "100%";
+    border-bottom: 1px solid #000;
+  }
+}

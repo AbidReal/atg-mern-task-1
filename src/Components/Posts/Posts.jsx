@@ -59,10 +59,7 @@ const Posts = () => {
   return (
     <div style={{ marginTop: "40px" }}>
       <div className="custom-container">
-        <div
-          className="d-flex justify-content-between pb-3"
-          style={{ borderBottom: "1px solid #e0e0e0" }}
-        >
+        <div className="d-flex justify-content-between pb-3 custom-tab-border">
           <div className="d-flex">
             <div
               className="me-4"
@@ -70,14 +67,16 @@ const Posts = () => {
                 position: "relative",
               }}
             >
-              All Posts(32)
+              <span className="d-none d-sm-block ">All Posts(32)</span>
+              <span className="d-sm-none fw-bold">Posts(368)</span>
+
               <span
+                className="custom-selected-border"
                 style={{
                   position: "absolute",
                   bottom: "-16px",
                   left: 0,
                   width: "100%",
-                  borderBottom: "1px solid black",
                 }}
               ></span>
             </div>
@@ -332,7 +331,7 @@ const Posts = () => {
                     </div>
                     <div className="d-flex align-items-center my-auto">
                       <p
-                        className="card-views d-flex align-items-center my-auto"
+                        className="card-views d-flex align-items-center my-auto d-none d-sm-block"
                         style={{ fontSize: "12px" }}
                       >
                         <svg
@@ -376,6 +375,7 @@ const Posts = () => {
                             </clipPath>
                           </defs>
                         </svg>
+                        <span className="d-sm-none">Share</span>
                       </div>
                     </div>
                   </div>
@@ -460,7 +460,7 @@ const Posts = () => {
               </svg>
             </div>
             <div className="ms-1" style={{ fontSize: "12px", opacity: "0.5" }}>
-              Your location will help us serve better and extend a personalised
+              Your location will help us serve better and extend a personalized
               experience.
             </div>
           </div>
