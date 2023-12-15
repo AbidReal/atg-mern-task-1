@@ -4,7 +4,7 @@ import "./Navigation.css";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 import logo from "../../../public/logo.svg";
-import searchIcon from "https://i.ibb.co/MVjKk2r/baseline-search-24px.png";
+
 import SignUp from "../User/SignUp";
 
 const Navigation = () => {
@@ -60,7 +60,7 @@ const Navigation = () => {
                 <Nav className="mx-auto">
                   <div className="relative-container">
                     <img
-                      src={searchIcon}
+                      src="https://i.ibb.co/MVjKk2r/baseline-search-24px.png"
                       alt="Search"
                       className="search-icon"
                     />
